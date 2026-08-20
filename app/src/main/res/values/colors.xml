@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Main Lavender Palette -->
+    <color name="primary">#9B7BE8</color>
+    <color name="primary_dark">#7655C9</color>
+    <color name="primary_light">#E9DEFF</color>
+
+    <!-- Background -->
+    <color name="background">#FAF7FF</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_primary">#30204D</color>
+    <color name="text_secondary">#766A88</color>
+
+    <!-- Borders -->
+    <color name="border">#E8DDF7</color>
+
+    <!-- Decorative -->
+    <color name="lavender_card">#F1E9FF</color>
+    <color name="pink_card">#FDECF7</color>
+    <color name="yellow_card">#FFF5DA</color>
+    <color name="green_card">#EEF8F1</color>
+
+    <!-- Delete -->
+    <color name="delete">#B05A83</color>
+
+    <color name="white">#FFFFFF</color>
+
 </resources>
