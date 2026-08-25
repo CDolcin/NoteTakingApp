@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#FBF9FF">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/fox_note"
+        android:contentDescription="Note Taking App Logo"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="My Notes"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#51427A" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Capture your ideas, anytime."
+        android:textSize="16sp"
+        android:textColor="#817A91" />
+
+    <Button
+        android:id="@+id/btnGetStarted"
+        android:layout_width="220dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="45dp"
+        android:text="Get Started"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#8B6FC7" />
+
+</LinearLayout>

@@ -3,7 +3,6 @@ package com.example.notetakingapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -12,6 +11,9 @@ class NoteAdapter(
     private val onNoteClick: (Note) -> Unit,
     private val onDeleteClick: (Note) -> Unit
 ) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+
+    // Keep the complete list of notes
+    private var allNotes: List<Note> = notes.toList()
 
     class NoteViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
@@ -64,8 +66,42 @@ class NoteAdapter(
         return notes.size
     }
 
+    // Update the complete list when notes are added/deleted
     fun updateNotes(newNotes: List<Note>) {
-        notes = newNotes
+
+        allNotes = newNotes.toList()
+        notes = newNotes.toList()
+
+        notifyDataSetChanged()
+    }
+
+    // Search/filter notes
+    fun filter(query: String) {
+
+        val searchText = query.trim()
+
+        notes = if (searchText.isEmpty()) {
+
+            // Show all notes when search is empty
+            allNotes
+
+        } else {
+
+            // Search both title and content
+            allNotes.filter { note ->
+
+                note.title.contains(
+                    searchText,
+                    ignoreCase = true
+                ) ||
+
+                        note.content.contains(
+                            searchText,
+                            ignoreCase = true
+                        )
+            }
+        }
+
         notifyDataSetChanged()
     }
 }
